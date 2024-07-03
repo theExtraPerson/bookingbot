@@ -14,7 +14,9 @@
     "noEmit": true,
     "jsx": "preserve",
     "types": [
-      "vite/client"
+      "vite/client",
+      "node",
+      "@vitejs/plugin-vue",
     ],
     "baseUrl": ".",
     "paths": {
