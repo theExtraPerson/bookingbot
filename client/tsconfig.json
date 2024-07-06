@@ -17,6 +17,7 @@
       "vite/client",
       "node",
       "@vitejs/plugin-vue",
+      "node-telegram-bot-api"
     ],
     "baseUrl": ".",
     "paths": {
@@ -32,7 +33,10 @@
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "node_modules/**/*",
+    "dist/**/*"
+    
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
