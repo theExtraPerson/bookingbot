@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "/start",
-    "start": "node ./dist/index.js",
+    "start": "node ./dist/main.ts",
     "build": "vite build",
     "dev": "vite"
   },
