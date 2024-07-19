@@ -10,7 +10,8 @@
     "test": "/start",
     "start": "node ./dist/main.ts",
     "build": "vite build",
-    "dev": "vite"
+    "dev": "vite",
+    "type-check": "vue-tsc --noEmit"
   },
   "author": "imthebot",
   "license": "ISC",
