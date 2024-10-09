@@ -45,7 +45,7 @@ export default function useTelegram(): useTelegramComposableState {
    * @param reference The reference to store the button
    * @param className The class name to add to the button
    */
-  function prepareDebugButton(reference: Ref<any>, className: string): void {
+  const prepareDebugButton = (reference: Ref<any>, className: string): void => {
     if (WebApp.platform !== 'unknown') {
       return
     }
@@ -67,7 +67,7 @@ export default function useTelegram(): useTelegramComposableState {
    * @param text The text to show on the button
    * @param callback The callback to call when the button is clicked
    */
-  function showMainButton(text: string, callback: () => void): void {
+  const showMainButton(text: string, callback: () => void): void => {
     prepareDebugButton(debugMainButton, 'fake-main-button')
 
     if (mainButtonCallback.value !== null) {
@@ -248,12 +248,11 @@ export default function useTelegram(): useTelegramComposableState {
   /**
    * The current platform of the device.
    */
-  const platform = WebApp.platform
 
   /**
    * The current header color of the app wrapper
    */
-  const headerColor = WebApp.headerColor
+  const { platform, headerColor } = WebApp
 
   return {
     showMainButton,

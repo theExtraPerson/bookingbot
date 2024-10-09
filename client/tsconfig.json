@@ -19,10 +19,15 @@
       "@vitejs/plugin-vue",
       "node-telegram-bot-api"
     ],
+    "typeRoots": ["node_modules/@types", ".src/types"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
     },
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
 
     /* Linting */
     "strict": true,
@@ -35,8 +40,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "node_modules/**/*",
-    "dist/**/*"
-    
+    "dist/**/*",
   ],
+  "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

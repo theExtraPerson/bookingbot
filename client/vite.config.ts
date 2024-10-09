@@ -10,4 +10,18 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  optimizeDeps:{
+  include: ['node-telegram-bot-api'],
+  },
+
+  root: './src',
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'src/main.ts'),
+      },
+    },
+  },
 })
